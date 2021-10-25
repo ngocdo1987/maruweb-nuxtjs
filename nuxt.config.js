@@ -1,24 +1,19 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  head () {
-    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
-    return {
-      htmlAttrs: {
-        lang: 'ja',
-        ...i18nHead.htmlAttrs
-      },
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: '' },
-        { name: 'format-detection', content: 'telephone=no' },
-        ...i18nHead.meta
-      ],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        ...i18nHead.link
-     ]
-    }
+  head: {
+    htmlAttrs: {
+      lang: 'ja'
+    },
+    title: 'Home page',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' },
+      { name: 'format-detection', content: 'telephone=no' }
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -42,12 +37,12 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt',
+    //'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/auth-next',
     '@nuxtjs/i18n',
-    '@nuxtjs/sitemap',
+    //'@nuxtjs/sitemap',
     '@nuxtjs/redirect-module'
   ],
 

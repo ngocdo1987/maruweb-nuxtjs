@@ -1,23 +1,15 @@
-# nuxtjs
+## Maruweb NuxtJS starter kit
 
-## Build Setup
+Maruweb NuxtJS starter kit source code
 
-```bash
-# install dependencies
-$ yarn install
+## How to setup
 
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-```
-
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+- Git clone
+- yarn install (install dependencies)
+- yarn dev (serve with hot reload at localhost:3000)
+- yarn build (build for production)
+- yarn start (launch server)
+- yarn generate (generate static project)
 
 ## Special Directories
 

@@ -3,5 +3,12 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head: {
+    title: 'Maruweb NuxtJS',
+    meta: [
+      { hid: 'description', name: 'description', content: 'Maruweb NuxtJS' }
+    ]
+  }
+}
 </script>
