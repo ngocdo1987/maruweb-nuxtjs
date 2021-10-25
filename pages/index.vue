@@ -1,5 +1,7 @@
 <template>
-  <h1>{{ $t('welcome') }} - Welcome</h1>
+  <div class="px-4 py-6 sm:px-0">
+    This is home page
+  </div>
 </template>
 
 <script>
