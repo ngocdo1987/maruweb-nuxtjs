@@ -194,12 +194,6 @@ export default {
     toggle () {
       this.isOpen = !this.isOpen
     }
-  },
-  head: {
-    title: 'Maruweb NuxtJS',
-    meta: [
-      { hid: 'description', name: 'description', content: 'Maruweb NuxtJS' }
-    ]
   }
 }
 </script>
