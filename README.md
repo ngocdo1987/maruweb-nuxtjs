@@ -136,6 +136,48 @@ server {
 }
 ```
 
+#### Final Nginx file (without SSL)
+```bash
+server {
+  server_name   <domain_name>;
+
+  location / {
+    proxy_pass             http://127.0.0.1:<PORT>;
+    proxy_read_timeout     60;
+    proxy_connect_timeout  60;
+    proxy_redirect         off;
+
+    # Allow the use of websockets
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection 'upgrade';
+    proxy_set_header Host $host;
+    proxy_cache_bypass $http_upgrade;
+  }
+}
+```
+
+#### Final Apache file (without SSL)
+Open apache httpd.conf file
+Enable the following Modules by removing the # at the front of the line.
+ - LoadModule rewrite_module modules/mod_rewrite.so
+ - LoadModule proxy_module modules/mod_proxy.so
+ - LoadModule proxy_http_module modules/mod_proxy_http.so
+ - LoadModule proxy_connect_module modules/mod_proxy_connect.so
+```bash
+<VirtualHost *:80>
+	ServerName <domain_name>
+	ProxyRequests On
+	<Proxy>
+		Order deny,allow
+		Allow from all
+	</Proxy>
+	ProxyPass / http://127.0.0.1:<PORT>/
+    ProxyPassReverse / http://127.0.0.1:<PORT>/
+	Header set Access-Control-Allow-Origin "*"
+</VirtualHost>
+```
+
 #### Restart nginx again
 ```bash
 $ sudo service nginx restart
