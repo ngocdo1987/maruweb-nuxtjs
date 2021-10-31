@@ -173,7 +173,7 @@ Enable the following Modules by removing the # at the front of the line.
 		Allow from all
 	</Proxy>
 	ProxyPass / http://127.0.0.1:<PORT>/
-    ProxyPassReverse / http://127.0.0.1:<PORT>/
+  ProxyPassReverse / http://127.0.0.1:<PORT>/
 	Header set Access-Control-Allow-Origin "*"
 </VirtualHost>
 ```
