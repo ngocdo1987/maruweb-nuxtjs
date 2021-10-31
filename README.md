@@ -12,6 +12,6 @@ Maruweb NuxtJS starter kit source code
 - yarn generate (generate static project)
 
 ## How to deploy
-- [a relative link](deploy-nuxtjs-to-nginx.md)
-- [a relative link](deploy-nuxtjs-to-nginx-full.md)
-- [a relative link](deploy-nuxtjs-to-apache.md)
+- [Deploy NuxtJS to Nginx](deploy-nuxtjs-to-nginx.md)
+- [Deploy NuxtJS to Nginx (full)](deploy-nuxtjs-to-nginx-full.md)
+- [Deploy NuxtJS on Apache](deploy-nuxtjs-to-apache.md)
